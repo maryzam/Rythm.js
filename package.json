@@ -13,6 +13,7 @@
     "prepublish": "npm run build",
     "test": "echo \"No test specified\" && exit 0",
     "build": "node build.js",
+    "prettier": "prettier src/**/*.js --write --config .prettierrc",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -45,7 +46,7 @@
   },
   "lint-staged": {
     "*.{js,css}": [
-      "prettier --write --config .prettierrc",
+      "prettier --write --config ./.prettierrc",
       "git add"
     ]
   }
