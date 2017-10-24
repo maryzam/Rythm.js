@@ -12,7 +12,8 @@
     "serve": "gulp serve",
     "prepublish": "npm run build",
     "test": "echo \"No test specified\" && exit 0",
-    "build": "node build.js"
+    "build": "node build.js",
+    "precommit": "lint-staged"
   },
   "repository": {
     "type": "git",
@@ -33,10 +34,19 @@
     "eslint": "^3.15.0",
     "gulp": "^3.9.1",
     "gulp-webserver": "^0.9.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "prettier": "^1.7.4",
     "rollup": "^0.41.4",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-watch": "^3.2.2",
     "uglify-es": "^3.0.28"
+  },
+  "lint-staged": {
+    "*.{js,css}": [
+      "prettier --write --config .prettierrc",
+      "git add"
+    ]
   }
 }
