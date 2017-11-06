@@ -10,7 +10,7 @@ import color, { reset as colorReset } from './dances/color.js'
 import radius, { reset as radiusReset } from './dances/radius.js'
 import blur, { reset as blurReset } from './dances/blur.js'
 import swing, { reset as swingReset } from './dances/swing.js'
-import halo, { reset as haloReset } from './dances/halo.js'
+import neon, { reset as neonReset } from './dances/neon.js'
 import kern, { reset as kernReset } from './dances/kern.js'
 
 class Dancer {
@@ -28,7 +28,7 @@ class Dancer {
     this.registerDance('radius', radius, radiusReset)
     this.registerDance('blur', blur, blurReset)
     this.registerDance('swing', swing, swingReset)
-    this.registerDance('halo', halo, haloReset)
+    this.registerDance('neon', neon, neonReset)
     this.registerDance('kern', kern, kernReset)
   }
 

@@ -59,12 +59,12 @@ window.onload = function() {
   rythm.addRythm('swing2', 'swing', 0, 10, { curve: 'up' })
   rythm.addRythm('swing3', 'swing', 0, 10, { direction: 'left' })
   rythm.addRythm('swing4', 'swing', 0, 10, { radius: 10 })
-  rythm.addRythm('halo1', 'halo', 0, 10)
-  rythm.addRythm('halo2', 'halo', 0, 10, {
+  rythm.addRythm('neon1', 'neon', 0, 10)
+  rythm.addRythm('neon2', 'neon', 0, 10, {
     from: [0, 0, 255],
     to: [255, 0, 255],
   })
-  rythm.addRythm('halo3', 'halo', 0, 10, {
+  rythm.addRythm('neon3', 'neon', 0, 10, {
     from: [255, 255, 0],
     to: [255, 0, 0],
   })

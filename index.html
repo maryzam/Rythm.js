@@ -24,9 +24,9 @@
         <a class="twist1" href="https://github.com/Okazari/Rythm.js/releases">Release notes</a>
       </div>
       <section>
-        <h1>
-          Basic
-        </h1>
+        <h3>
+          Basic usage
+        </h3>
         <div class="demo">
           <div class="rythm rythm-bass">♫</div>
           <pre class="prettyprint">
@@ -46,87 +46,123 @@
           </pre>
         </div>
       </section>
+      <h1>
+        Added in v2.2.2
+      </h1>
       <section>
-        <h1>
-          Pulse
-        </h1>
+        <h3>
+          Neon
+        </h3>
         <div class="demo">
-          <div class="rythm pulse1">♫</div>
+          <div class="rythm neon1"></div>
           <pre class="prettyprint">
-            rythm.addRythm('pulse1', 'pulse', 0, 10)
+            rythm.addRythm('neon1', 'neon', 0, 10)
           </pre>
         </div>
         <div class="demo">
-          <div class="rythm pulse2">♫</div>
+          <div class="rythm neon2"></div>
           <pre class="prettyprint">
-            rythm.addRythm('pulse2', 'pulse', 0, 10, {
-              min: 0.1,
-              max: 1
+            rythm.addRythm('neon2', 'neon', 0, 10, {
+              from: [0,0,255],
+              to:[255,0,255]
             })
           </pre>
         </div>
         <div class="demo">
-          <div class="rythm pulse3">♫</div>
+          <div class="rythm neon3"></div>
           <pre class="prettyprint">
-            rythm.addRythm('pulse3', 'pulse', 0, 10, {
-              min: 1,
-              max: 1.75
+            rythm.addRythm('neon3', 'neon', 0, 10, {
+              from: [255,255,0],
+              to:[255,0,0]
+            })</pre>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Border-Color
+        </h3>
+        <div class="demo">
+          <div class="rythm borderColor1"></div>
+          <pre class="prettyprint">
+            rythm.addRythm('borderColor1', 'borderColor', 0, 10)
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm borderColor2"></div>
+          <pre class="prettyprint">
+            rythm.addRythm('borderColor2', 'borderColor', 0, 10, {
+              from: [0,0,255],
+              to:[255,0,255]
+            })
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm borderColor3"></div>
+          <pre class="prettyprint">
+            rythm.addRythm('borderColor3', 'color', 0, 10, {
+              from: [255,255,0],
+              to:[255,0,0]
             })
           </pre>
         </div>
       </section>
       <section>
-        <h1>
-          Jump
-        </h1>
+        <h3>
+          Kern
+        </h3>
         <div class="demo">
-          <div class="rythm jump1">♫</div>
+          <div class="rythm rythm-kern kern1">𐇑🕪 rythm.js</div>
           <pre class="prettyprint">
-            rythm.addRythm('jump1', 'jump', 0, 10)
+            rythm.addRythm('kern1', 'kern', 0, 10 , {
+              min: -5,
+              max: 5
+            })
           </pre>
         </div>
         <div class="demo">
-          <div class="rythm jump2">♫</div>
+          <div class="rythm rythm-kern kern2">𐇑🕪 rythm.js</div>
           <pre class="prettyprint">
-            rythm.addRythm('jump2', 'jump', 150, 40, {
-              min: -20,
-              max: 20
+            rythm.addRythm('kern2', 'kern', 0, 10 , {
+              min: -5,
+              max: 5,
+              reverse: true,
             })
           </pre>
         </div>
       </section>
+      <h1>
+        Added in v2.2.1
+      </h1>
       <section>
-        <h1>
-          Shake
-        </h1>
+        <h3>
+          Blur
+        </h3>
         <div class="demo">
-          <div class="rythm shake1">♫</div>
+          <div class="rythm blur1">♫</div>
           <pre class="prettyprint">
-            rythm.addRythm('shake1', 'shake', 0, 10)
+            rythm.addRythm('blur1', 'blur', 0, 10)
           </pre>
         </div>
         <div class="demo">
-          <div class="rythm shake2">♫</div>
+          <div class="rythm blur2">♫</div>
           <pre class="prettyprint">
-            rythm.addRythm('shake2', 'shake', 150, 40, {
-              min: 0,
-              max: 20
+            rythm.addRythm('blur2', 'blur', 0, 10, {
+              reverse: true
             })
           </pre>
         </div>
         <div class="demo">
-          <div class="rythm shake3">♫</div>
+          <div class="rythm blur3">♫</div>
           <pre class="prettyprint">
-            rythm.addRythm('shake3', 'shake', 0, 10, {
-              direction: 'left'
-            })
-          </pre>
+            rythm.addRythm('blur3', 'color', 0, 10, {
+              max: 16
+            })</pre>
         </div>
       </section>
       <section>
-        <h1>
+        <h3>
           Swing
-        </h1>
+        </h3>
         <div class="demo">
           <div class="rythm swing1">♫</div>
           <pre class="prettyprint">
@@ -158,10 +194,115 @@
           </pre>
         </div>
       </section>
+      <h1>
+        Added in v2.2.0
+      </h1>
       <section>
-        <h1>
+        <h3>Border-Radius</h3>
+        <div class="demo">
+          <div class="rythm radius1"></div>
+          <pre class="prettyprint">
+            rythm.addRythm('radius1', 'radius', 0, 10, {
+              min: 0,
+              max: 30
+            })
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm radius2"></div>
+          <pre class="prettyprint">
+            rythm.addRythm('radius1', 'radius', 0, 10, {
+              reverse: true,
+              min: 0,
+              max: 30
+            })
+          </pre>
+        </div>
+      </section>
+      <h1>
+        Added in v2.0.0
+      </h1>
+      <section>
+        <h3>
+          Pulse
+        </h3>
+        <div class="demo">
+          <div class="rythm pulse1">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('pulse1', 'pulse', 0, 10)
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm pulse2">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('pulse2', 'pulse', 0, 10, {
+              min: 0.1,
+              max: 1
+            })
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm pulse3">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('pulse3', 'pulse', 0, 10, {
+              min: 1,
+              max: 1.75
+            })
+          </pre>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Jump
+        </h3>
+        <div class="demo">
+          <div class="rythm jump1">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('jump1', 'jump', 0, 10)
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm jump2">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('jump2', 'jump', 150, 40, {
+              min: -20,
+              max: 20
+            })
+          </pre>
+        </div>
+      </section>
+      <section>
+        <h3>
+          Shake
+        </h3>
+        <div class="demo">
+          <div class="rythm shake1">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('shake1', 'shake', 0, 10)
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm shake2">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('shake2', 'shake', 150, 40, {
+              min: 0,
+              max: 20
+            })
+          </pre>
+        </div>
+        <div class="demo">
+          <div class="rythm shake3">♫</div>
+          <pre class="prettyprint">
+            rythm.addRythm('shake3', 'shake', 0, 10, {
+              direction: 'left'
+            })
+          </pre>
+        </div>
+      </section>
+      <section>
+        <h3>
           Twist
-        </h1>
+        </h3>
         <div class="demo">
           <div class="rythm twist1">♫</div>
           <pre class="prettyprint">
@@ -187,9 +328,9 @@
         </div>
       </section>
       <section>
-        <h1>
+        <h3>
           Vanish
-        </h1>
+        </h3>
         <div class="demo">
           <div class="rythm vanish vanish1">♫</div>
           <pre class="prettyprint">
@@ -206,110 +347,9 @@
         </div>
       </section>
       <section>
-        <h1>
-          Kern
-        </h1>
-        <div class="demo">
-          <div class="rythm rythm-kern kern1">𐇑🕪 rythm.js</div>
-          <pre class="prettyprint">
-            rythm.addRythm('kern1', 'kern', 0, 10 , {
-              min: -5,
-              max: 5
-            })
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm rythm-kern kern2">𐇑🕪 rythm.js</div>
-          <pre class="prettyprint">
-            rythm.addRythm('kern2', 'kern', 0, 10 , {
-              min: -5,
-              max: 5,
-              reverse: true,
-            })
-          </pre>
-        </div>
-      </section>
-      <section>
-        <h1>
-          Blur
-        </h1>
-        <div class="demo">
-          <div class="rythm blur1">♫</div>
-          <pre class="prettyprint">
-            rythm.addRythm('blur1', 'blur', 0, 10)
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm blur2">♫</div>
-          <pre class="prettyprint">
-            rythm.addRythm('blur2', 'blur', 0, 10, {
-              reverse: true
-            })
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm blur3">♫</div>
-          <pre class="prettyprint">
-            rythm.addRythm('blur3', 'color', 0, 10, {
-              max: 16
-            })</pre>
-        </div>
-      </section>
-      <section>
-        <h1>Border-Radius</h1>
-        <div class="demo">
-          <div class="rythm radius1"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('radius1', 'radius', 0, 10, {
-              min: 0,
-              max: 30
-            })
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm radius2"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('radius1', 'radius', 0, 10, {
-              reverse: true,
-              min: 0,
-              max: 30
-            })
-          </pre>
-        </div>
-      </section>
-      <section>
-        <h1>
-          Border-Color
-        </h1>
-        <div class="demo">
-          <div class="rythm borderColor1"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('borderColor1', 'borderColor', 0, 10)
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm borderColor2"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('borderColor2', 'borderColor', 0, 10, {
-              from: [0,0,255],
-              to:[255,0,255]
-            })
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm borderColor3"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('borderColor3', 'color', 0, 10, {
-              from: [255,255,0],
-              to:[255,0,0]
-            })
-          </pre>
-        </div>
-      </section>
-      <section>
-        <h1>
+        <h3>
           Background-Color
-        </h1>
+        </h3>
         <div class="demo">
           <div class="rythm color1"></div>
           <pre class="prettyprint">
@@ -329,34 +369,6 @@
           <div class="rythm color3"></div>
           <pre class="prettyprint">
             rythm.addRythm('color3', 'color', 0, 10, {
-              from: [255,255,0],
-              to:[255,0,0]
-            })</pre>
-        </div>
-      </section>
-      <section>
-        <h1>
-          Halo
-        </h1>
-        <div class="demo">
-          <div class="rythm halo1"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('halo1', 'halo', 0, 10)
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm halo2"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('halo2', 'halo', 0, 10, {
-              from: [0,0,255],
-              to:[255,0,255]
-            })
-          </pre>
-        </div>
-        <div class="demo">
-          <div class="rythm halo3"></div>
-          <pre class="prettyprint">
-            rythm.addRythm('halo3', 'halo', 0, 10, {
               from: [255,255,0],
               to:[255,0,0]
             })</pre>

@@ -398,6 +398,29 @@
     elem.style.transform = ''
   }
 
+  var neon = function(elem, value) {
+    var options =
+      arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {}
+
+    var from = options.from || [0, 0, 0]
+    var to = options.to || [255, 255, 255]
+    var scaleR = (to[0] - from[0]) * value
+    var scaleG = (to[1] - from[1]) * value
+    var scaleB = (to[2] - from[2]) * value
+    elem.style.boxShadow =
+      '0 0 1em rgb(' +
+      Math.floor(to[0] - scaleR) +
+      ', ' +
+      Math.floor(to[1] - scaleG) +
+      ', ' +
+      Math.floor(to[2] - scaleB) +
+      ')'
+  }
+
+  var reset$10 = function reset(elem) {
+    elem.style.boxShadow = ''
+  }
+
   var kern = function(elem, value) {
     var options =
       arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {}
@@ -413,7 +436,7 @@
     elem.style.letterSpacing = kern + 'px'
   }
 
-  var reset$10 = function reset(elem) {
+  var reset$11 = function reset(elem) {
     elem.style.letterSpacing = ''
   }
 
@@ -434,7 +457,8 @@
       this.registerDance('radius', radius, reset$7)
       this.registerDance('blur', blur, reset$8)
       this.registerDance('swing', swing, reset$9)
-      this.registerDance('kern', kern, reset$10)
+      this.registerDance('neon', neon, reset$10)
+      this.registerDance('kern', kern, reset$11)
     }
 
     createClass(Dancer, [
