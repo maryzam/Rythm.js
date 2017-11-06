@@ -1,4 +1,4 @@
-<♫/> Rythm.js - v2.2.1
+<♫/> Rythm.js - v2.2.2
 ========
 
 [![Build Status](https://travis-ci.org/Okazari/Rythm.js.svg?branch=master)](https://travis-ci.org/Okazari/Rythm.js)
@@ -188,6 +188,9 @@ Here are the build in dances and their options
   + min : Minimum value given to `letter-spacing`. Default: `0`
   + max : Maximum value given to `letter-spacing`. Default: `25`
   + reverse : Boolean to make effect from max to min. Default: `false
++ Neon
+  + from : Array of integer between 0 and 255 corresponding to a RGB color. Default: `[0,0,0]`
+  + to : Array of integer between 0 and 255 corresponding to a RGB color. Default: `[255,255,255]`
 
 To see each visual effect, you can go to the [Demo](https://okazari.github.io/Rythm.js/)
 
