@@ -12,7 +12,9 @@ window.onload = function() {
         document.getElementById('shout').innerHTML = `
         <div class="thanks">Thanks for your contribution !</div>
         <img class="contributor-avatar" src="${contributor.avatar_url}" />
-        <div class="contributor-login"><a class="contributor-login-link" href="${contributor.html_url}">${contributor.login}</a></div>
+        <div class="contributor-login"><a class="contributor-login-link" href="${
+          contributor.html_url
+        }">${contributor.login}</a></div>
       `
       })
   }
@@ -50,6 +52,11 @@ window.onload = function() {
   rythm.addRythm('borderColor3', 'borderColor', 0, 10, {
     from: [255, 255, 0],
     to: [255, 0, 0],
+  })
+  rythm.addRythm('borderWidth1', 'borderWidth', 0, 2)
+  rythm.addRythm('borderWidth2', 'borderWidth', 0, 2, {
+    min: 2,
+    max: 10,
   })
   rythm.addRythm('radius1', 'radius', 0, 10, { min: 0, max: 30 })
   rythm.addRythm('radius2', 'radius', 0, 10, { reverse: true, min: 0, max: 30 })
